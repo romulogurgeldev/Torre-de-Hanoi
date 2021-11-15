@@ -1,0 +1,392 @@
+/*RESET*/
+
+/*descomentar reset depois talvez*/
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;*/
+
+/*ESTILIZAÇÃO DO MOBILE*/
+
+body {
+  background-image: url("./wallpaper-hanoi-2.jpeg");
+  font-family: "Press Start 2P", cursive;
+  color: white;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin: 10px 10px 30px 10px;
+  padding: 10px;
+  color: white;
+  font-size: 19px;
+  text-shadow: 4px 2px 1px #2558f0;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.container {
+  padding-top: 15px;
+  /* display:flex;
+    text-align: center;
+    justify-content: center; */
+}
+
+/* HEADER */
+
+#cabecalho {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  text-align: center;
+  color: white;
+}
+header h1 {
+  font-size: 15vw;
+  font-family: "Londrina Solid";
+  text-transform: uppercase;
+}
+header #cabecalho {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+header #restart {
+  align-self: center;
+  margin-right: -10px;
+}
+/*ANTES DO BOTÃO START COMEÇAR*/
+
+#instrutions p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+ol li {
+  font-size: 16px;
+}
+
+#instrutions-2,
+ol {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#div-play {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+button {
+  font-family: "Press Start 2P", cursive;
+  border: 4px solid #ffff00;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  border: 4px solid red;
+  cursor: pointer;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+ol li {
+  font-size: 14px;
+}
+
+/* MAIN */
+
+#torre1 {
+  margin: 0 50px 0 20px;
+}
+
+#torre2 {
+  margin: 0 50px 0 50px;
+}
+
+#torre3 {
+  margin: 0 20px 0 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#main .torre {
+  width: 12px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: white;
+}
+#main .torre:hover {
+  cursor: pointer;
+}
+#main .torre .bloco {
+  width: 35px;
+  height: 20px;
+  background-color: #fb0102;
+}
+#main .torre #bloco1 {
+  width: 55px;
+  background-color: #ff9203;
+  cursor: pointer;
+}
+#main .torre #bloco2 {
+  width: 75px;
+  background-color: #ffff00;
+  cursor: pointer;
+}
+#main .torre #bloco3 {
+  width: 95px;
+  background-color: #fda2a1;
+  cursor: pointer;
+}
+#main .torre #bloco4 {
+  width: 115px;
+  background-color: #1cd7dc;
+  cursor: pointer;
+}
+/* #main .torre #bloco5 {
+    width: 100px;
+    background-color: black;
+    cursor: pointer;
+} */
+/* BUTTONS */
+.bonus {
+  margin: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+#extraKenzie {
+  display: none;
+}
+
+button {
+  transition: 0.2s, color 0.2s;
+}
+
+#btn-restart {
+  display: none;
+  font-size: 12px;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  border: 4px solid #ff9203;
+}
+
+#btn-restart:hover {
+  border: 4px solid #fb0102;
+}
+
+#msg {
+  position: absolute;
+  z-index: 1;
+  transform: translate(50%, 50%);
+  right: 50%;
+  margin-top: -30px;
+  font-weight: 600;
+  font-size: 8vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*NOVO EMBAIXO DAS TORRES*/
+
+.bonus {
+  display: flex;
+  flex-direction: row;
+}
+
+#movimentos {
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+#time-content {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#tresDiscos,
+#quatroDiscos,
+#cincoDiscos {
+  font-size: 12px;
+  margin: 7px;
+  padding: 8px;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 800px) {
+  .container {
+    margin: 0 auto;
+  }
+
+  /* HEADER */
+  header h1 {
+    font-size: 100px;
+  }
+  header #cabecalho {
+    width: 85%;
+  }
+
+  /* #MAIN */
+  #main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #main .torre {
+    width: 25px;
+    height: 215px;
+  }
+  #main .torre .bloco {
+    height: 35px;
+  }
+  #main .torre #bloco1 {
+    width: 65px;
+  }
+  #main .torre #bloco2 {
+    width: 100px;
+  }
+  #main .torre #bloco3 {
+    width: 135px;
+  }
+  #main .torre #bloco4 {
+    width: 170px;
+  }
+  #msg {
+    font-size: 40px;
+  }
+  /* MAIN */
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  #main .torre:hover {
+    background-color: rgb(173, 173, 173);
+  }
+  #main .torre .bloco {
+    width: 50px;
+    border: 2px solid #000;
+    background-color: #fb0102;
+    cursor: pointer;
+  }
+  #main .torre #bloco1 {
+    width: 80px;
+    background-color: #ff9203;
+    cursor: pointer;
+  }
+  #main .torre #bloco2 {
+    width: 110px;
+    background-color: #ffff00;
+    cursor: pointer;
+  }
+  #main .torre #bloco3 {
+    width: 140px;
+    background-color: #fda2a1;
+    cursor: pointer;
+  }
+  #main .torre #bloco4 {
+    width: 170px;
+    background-color: #1cd7dc;
+    cursor: pointer;
+  }
+  /* #main .torre #bloco5 {
+        width: 200px;
+        background-color: black;
+        cursor: pointer;
+    } */
+
+  /*antes do botão start*/
+
+  h2 {
+    font-size: 45px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  ol {
+    align-items: center;
+    align-content: center;
+  }
+
+  ol li {
+    font-size: 20px;
+  }
+
+  #instrutions p {
+    font-size: 20px;
+    margin: 30px;
+  }
+
+  /*depois do botão start*/
+
+  #torre1 {
+    margin: 0 90px 0 20px;
+  }
+
+  #torre2 {
+    margin: 0 90px 0 90px;
+  }
+
+  #torre3 {
+    margin: 0 20px 0 90px;
+  }
+}

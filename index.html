@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Torre de Hanoi</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h2>Torre de Hanoi</h2>
+
+        <section id="instrutions">
+          <p>INSTRUCTIONS</p>
+          <p id="instrutions-2">
+            Você deverá mover todos os discos para a torre C, mas para isso
+            temos algumas regras:
+          </p>
+          <ol>
+            <li>Movimentar um só disco de cada vez.</li>
+            <li>Um disco maior não pode ficar acima de um menor</li>
+            <li>
+              Não é permitido movimentar um disco que esteja abaixo de outro
+            </li>
+          </ol>
+          <div id="div-play">
+            <button type="button" id="btn-start">START</button>
+          </div>
+        </section>
+
+        <main>
+          <div id="main"></div>
+          <div id="base"></div>
+        </main>
+
+        <div id="cabecalho">
+          <div id="extraKenzie">
+            <div class="bonus">
+              <button id="tresDiscos">FACIL</button>
+              <button id="quatroDiscos">MEDIO</button>
+              <button id="cincoDiscos">DIFICIL</button>
+            </div>
+            <p id="movimentos">Movimentos: <span>0</span></p>
+            <p id="time-content">00:00</p>
+          </div>
+
+          <div id="restart">
+            <button type="button" id="btn-restart">Reiniciar</button>
+          </div>
+        </div>
+      </header>
+
+      <p id="msg"></p>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+  rel="stylesheet"
+/>
